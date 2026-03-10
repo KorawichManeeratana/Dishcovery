@@ -25,7 +25,7 @@ export default async function FoodDetailPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-linear-to-b from-orange-50 via-white to-white">
       {/* Navigation Bar - CSS Flexbox */}
       <nav className="flex items-center justify-between p-4 border-b sticky top-0 bg-white/80 backdrop-blur-md z-10">
         <Link
@@ -50,7 +50,7 @@ export default async function FoodDetailPage({ params }) {
           {/* Left Column: Image Section - CSS Positioning */}
           <div className="relative group">
             <div className="aspect-square overflow-hidden rounded-3xl bg-gray-100 shadow-xl">
-              <img src={food.image} alt={food.name} className="..." />
+              <img src={food.image} alt={food.name} className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -118,22 +118,8 @@ export default async function FoodDetailPage({ params }) {
             {/* Action Section - CSS Box Model & Positioning */}
             <div className="mt-auto p-6 rounded-3xl bg-gray-50 border flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">Total Price</p>
+                <p className="text-sm text-gray-500">Price</p>
                 <p className="text-3xl font-black">${Number(food?.price || 0).toFixed(2)}</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="flex items-center border rounded-xl bg-white p-1">
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    -
-                  </Button>
-                  <span className="w-8 text-center font-bold">1</span>
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    +
-                  </Button>
-                </div>
-                <Button className="bg-black text-white px-8 py-6 rounded-2xl hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200">
-                  Add to Cart
-                </Button>
               </div>
             </div>
           </div>
