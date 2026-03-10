@@ -34,14 +34,6 @@ export default async function FoodDetailPage({ params }) {
         >
           <ChevronLeft className="w-5 h-5 mr-1" /> Back to Discover
         </Link>
-        <div className="flex gap-4">
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Heart className="w-5 h-5" />
-          </Button>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Share2 className="w-5 h-5" />
-          </Button>
-        </div>
       </nav>
 
       <main className="max-w-6xl mx-auto p-6">
